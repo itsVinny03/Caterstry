@@ -1,0 +1,134 @@
+/* Set the background color for the page */
+body {
+  background: rgb(37, 73, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(37, 73, 191, 1) 14%,
+    rgba(38, 38, 75, 1) 41%,
+    rgba(82, 118, 215, 1) 72%,
+    rgba(0, 172, 255, 1) 87%,
+    rgba(0, 172, 255, 1) 87%
+  );
+}
+
+/* Center the content on the page */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 30px;
+  padding-right: 45px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+}
+
+/* Style the form elements */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+select {
+  background-size: 20px;
+  padding-right: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  transition: transform 600ms;
+  transition-timing-function: cubic-bezier(0.75, -3, 0.25, 4);
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #44a049;
+  transform: scale(1.1);
+}
+
+a {
+  background-color: red;
+  border: none;
+  margin-right: 10px;
+  transition: transform 600ms;
+  transition-timing-function: cubic-bezier(0.75, -3, 0.25, 4);
+}
+
+a:hover {
+  background-color: #d32f2f;
+  transform: scale(1.1);
+}
+
+.checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.checkboxes label {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  grid-column: 1/ 2;
+}
+
+.checkboxes input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkboxes {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .checkboxes label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .checkboxes input[type="checkbox"] {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
